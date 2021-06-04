@@ -6,10 +6,17 @@
 }
 
 @font-face{
-font-family: 'font-family: 'Montserrat', sans-serif;';
-src: url('../Newsite/assets/fonts/Montserrat-Bold.ttf');
-font-weight: normal;
-font-style: normal;
+    font-family: 'font-family: 'Montserrat', sans-serif;';
+    src: url('../Newsite/assets/fonts/Montserrat-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'font-family: 'Roboto', sans-serif;';
+    src: url('../Newsite/assets/fonts/Roboto-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -108,6 +115,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav {
     font-size: 14px;
     text-transform: uppercase;
+    font-weight:bold;
 }
 
 .nav__link {
@@ -207,4 +215,112 @@ h1, h2, h3, h4, h5, h6 {
 .slider__num {
     font-size: 24px;
     font-weight: 700;
+}
+
+/*Section*/
+.section {
+    padding: 80px 0;
+}
+
+.section__header {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.section__suptitle {
+    font-family: 'Kaushan Script', cursive;;
+    font-size: 24px;
+    color: #333;
+}
+
+.section__title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.section__title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 30px auto;
+    background-color: #f38181;
+}
+
+.section__text {
+    color: #999999;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*About*/
+.about {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__item {
+    width: 380px;
+}
+
+.about__item:hover .about__img {
+    transform: translate3d(-10px, -10px, 0);
+}
+
+.about__item:hover .about__img img{
+    opacity: .2;
+}
+
+.about__img {
+    background: linear-gradient(to bottom, #f38181, #fce38a);
+    transition: transform .2s linear;
+    border-radius: 20px;
+}
+
+.about__img img {
+    display: block;
+    transition: opacity .2s linear;
+    border-radius: 20px;
+}
+
+/*Stat*/
+.statistics {
+    background-color: #999999;
+    border-radius: 20px;
+    margin: 0 10px;
+    box-shadow: 1px 1px 40px 1px gray;
+    opacity: .8;
+}
+
+.stat {
+    display: flex;
+}
+
+.stat__item {
+    flex: 1 1 0;
+    border-left: 1px solid #fff;
+    text-align: center;
+    color: #fff;
+    padding: 40px 25px;
+}
+
+.stat__item:last-child {
+    border-right: 1px solid #fff;
+}
+
+.stat__count {
+    margin-bottom: 10px;
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.stat__text {
+    font-size: 14px;
+    text-transform: uppercase;
 }
