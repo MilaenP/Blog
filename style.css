@@ -120,9 +120,8 @@ hr {
     padding-top: 30px;
 }
 
-.header--fixed {
-    padding: 10px 0;
-    background-color: #524660;
+.header.fixed {
+    background-color: #999999;
     border-radius: 0px 0px 15px 15px;
     position: fixed;
     top: 0;
@@ -130,6 +129,11 @@ hr {
     left: 0;
     transform: translate3d(0, 0, 0);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
+}
+
+.header.active {
+    background-color: #999999;
+    border-radius: 0px 0px 15px 15px;
 }
 
 .header__inner {
@@ -211,6 +215,26 @@ hr {
         bottom: 0;
         left: 0;
         margin: auto;
+        transition: background .2s linear;
+
+    }
+
+    .nav-toggle.active .nav-toggle__item {
+        background: none;
+    }
+
+    .nav-toggle.active .nav-toggle__item:before {
+        transform-origin: left top;
+        transform: rotate(45deg)
+        translateX(-2px);
+
+    }
+
+    .nav-toggle.active .nav-toggle__item:after {
+        transform-origin: left bottom;
+        transform: rotate(-45deg)
+        translateX(-3px);
+
     }
 
     .nav-toggle__item:before,
@@ -222,6 +246,7 @@ hr {
         background-color: #fff;
         left: 0;
         z-index: 1;
+        transition: transform .2s linear;
     }
 
     .nav-toggle__item:before {
@@ -757,12 +782,23 @@ hr {
 
     /*Header*/
     .header {
-        padding-top: 10px;
+        padding: 10px 0;
     }
 
     /*Nav*/
     .nav {
         display: none;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        background-color: #524660;
+    }
+
+    .nav__link {
+        display: block;
+        margin: 0;
+        padding: 8px 20px;
     }
     .nav-toggle {
         display: block;
