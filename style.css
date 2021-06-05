@@ -209,6 +209,10 @@ hr {
         z-index: 1;
     }
 
+    .nav-toggle:focus {
+        outline: 0;
+    }
+
     .nav-toggle__item {
         display: block;
         width: 100%;

@@ -52,6 +52,14 @@ $(function() {
         });
 
 
+        /* Callapse */
+        $("[data-collapse]").on("click", function(event) {
+            event.preventDefault();
+            var $this = $(this),
+                blockid = $this.data('collapse');
+
+            $this.toggleClass("active");
+        });
 
 
 
