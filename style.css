@@ -120,6 +120,18 @@ hr {
     padding-top: 30px;
 }
 
+.header--fixed {
+    padding: 10px 0;
+    background-color: #524660;
+    border-radius: 0px 0px 15px 15px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: translate3d(0, 0, 0);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
+}
+
 .header__inner {
     display: flex;
     justify-content: space-between;
@@ -175,10 +187,16 @@ hr {
     .nav-toggle {
         width: 30px;
         padding: 10px 0;
+        font-size: 0;
+        color: transparent;
+        border: 0;
+        background: none;
+        cursor: pointer;
+        display: none;
 
         position: absolute;
-        top: 15px;
-        right: 15px;
+        top: 24px;
+        right: 24px;
         z-index: 1;
     }
 
@@ -737,9 +755,17 @@ hr {
         min-height: 650px;
     }
 
+    /*Header*/
+    .header {
+        padding-top: 10px;
+    }
+
     /*Nav*/
     .nav {
         display: none;
+    }
+    .nav-toggle {
+        display: block;
     }
 
     /*Section*/
